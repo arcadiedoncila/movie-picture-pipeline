@@ -1,4 +1,3 @@
-
 module.exports = {
   ignorePatterns: ['build/', 'dist/', 'node_modules/'],
   extends: ['eslint:recommended', 'plugin:react/recommended'],
