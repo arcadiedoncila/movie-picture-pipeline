@@ -63,7 +63,7 @@ jobs:
 
       - run: docker build -t mp-backend:${{ github.sha }} .
 
-    deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     needs:
@@ -100,4 +100,3 @@ jobs:
         run: |
           kustomize edit set image backend=${{ secrets.BACKEND_ECR }}:${{ github.sha }}
           kustomize build | kubectl apply -f -
-
